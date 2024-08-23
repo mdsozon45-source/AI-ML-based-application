@@ -5,6 +5,16 @@ import torch
 from torchvision import transforms
 from PIL import Image
 
+# class ImageUploadView(generics.CreateAPIView):
+#     queryset = ImageData.objects.all()
+#     serializer_class = ImageDataSerializer
+
+#     def perform_create(self, serializer):
+#         instance = serializer.save()
+#         # Placeholder for AI model processing
+#         result = "Processed result goes here"
+#         AnalysisResult.objects.create(image=instance, result=result)
+
 
 
 class ImageUploadView(generics.CreateAPIView):
