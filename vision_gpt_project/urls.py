@@ -21,8 +21,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('ai_app.urls')),  # Include the app's API routes
-]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('api/', include('ai_app.urls')),
+    path('face-api/', include('face_recog_app.urls')),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
